@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="./assets/css/styles.css">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
+        <script src="https://code.jquery.com/jquery-3.6.4.min.js" integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
+        <link rel="icon" href="./assets/imagenes/n.png">
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>Nimrodel Pub Restaurant</title>
+    </head>
+    <body>
+        <header>
+            <nav data-bs-theme="dark" class=" image navbar navbar-expand-lg navbar-expand-md bg-body-tertiary">
+                <div class="container-fluid">
+                    <img class="logo navba-brand" src="./assets/imagenes/n.png" alt="n con luces de neon">
+                  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                  </button>
+                  <div class="collapse navbar-collapse flex-grow-0" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                      <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Nuestros Productos</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link active" href="#" id="sobre">Sobre Nosotros</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link active" href="#comuniquemonos" onclick="showComu()">Comuniquemonos</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link active" href="#reserva" onclick="showRes()">Reserva</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </nav>
+        </header>
+        <main>
+            <h1 class="text-body-secondary m-5" id="titulo" >Nimrodel Pub Restaurant</h1>
+            <!-- <p><span id="s">this is an extra small screen  </span><span id="m">this is a small screen  </span>
+                <span id="l">this is a medium screen </span><span id="xl">this is a large screen</span>
+            </p> -->
+
+            <h2 class="m-3">Destacados de la semana</h2>
+
+            <div class="card-group flex-sm-column flex-md-row px-4 px-md-5 gap-4 column-gap-3">
+                <div class="card">
+                  <img class="card-img-top" id="bebidas-click" src="./assets/imagenes/bebidas.jpg" alt="Card image cap">
+                  <div class="card-body">
+                    <h5 class="card-title">GASEOSAS</h5>
+                    <p class="card-text">Eius et v mirum vero typi sacrilegam odit lorem ad w argenti quis-ut ut conflictus saeculi. Odio srripta in p tollit iis decima.</p>
+                  </div>
+                </div>
+                <div class="card">
+                  <img class="card-img-top" id="tablas-click" src="./assets/imagenes/tablas.jpg" alt="Card image cap">
+                  <div class="card-body">
+                    <h5 class="card-title">TABLAS</h5>
+                    <p class="card-text">Quis unde quo trnerabunt nisl uidem eu w placida fuga-si at qualitatem debitam.</p>
+                  </div>
+                </div>
+                <div class="card">
+                  <img class="card-img-top" id="shop-click" src="./assets/imagenes/shop.jpeg" alt="Card image cap">
+                  <div class="card-body">
+                    <h5 class="card-title">SHOP CERVEZA</h5>
+                    <p class="card-text">Erat mi p sequi unde wisi praesentis odit atque eu p integro orci-te te destitutus privato. Sunt pede mus quos physim polonia eius dui illud te quam nisi mirum restat lapide.</p>
+                  </div>
+                </div>
+              </div>
+
+            <div class="carta-above" id="bebidas-above">
+              <h1>GASEOSAS</h1>
+              <p>Eius et v mirum vero typi sacrilegam odit lorem ad w argenti quis-ut ut conflictus saeculi. Odio srripta in p tollit iis decima.</p>
+              <img class="cartas-above" src="./assets/imagenes/bebidas.jpg" alt="Card image cap">
+            </div>
+            <div class="carta-above" id="tablas-above">
+              <h1>TABLAS</h1>
+              <p>Quis unde quo trnerabunt nisl uidem eu w placida fuga-si at qualitatem debitam.</p>
+              <img class="cartas-above" src="./assets/imagenes/tablas.jpg" alt="Card image cap">
+            </div>
+            <div class="carta-above" id="shop-above">
+              <h1>SHOP CERVEZA</h1>
+              <p>Erat mi p sequi unde wisi praesentis odit atque eu p integro orci-te te destitutus privato. Sunt pede mus quos physim polonia eius dui illud te quam nisi mirum restat lapide.</p>
+              <img class="cartas-above" src="./assets/imagenes/shop.jpeg" alt="Card image cap">
+            </div>
+        
+        </main>
+
+        <form method="get" action="" id="comuniquemonos" class="container d-md-block w-75">
+          <h3>Comuniquemonos</h3>
+          <div class="mb-3">
+            <label for="nombre" class="form-label">Nombre</label>
+            <input type="text" class="form-control" id="nombre" required placeholder="Ingresa tu nombre">
+          </div>
+
+          <div class="mb-3">
+            <label for="correo" class="form-label">Correo</label>
+            <input type="email" class="form-control" id="correo" required placeholder="Ingresa tu correo">
+          </div>
+
+          <div class="mb-3">
+            <label for="telefono" class="form-label">Telefono</label>
+            <input type="tel" class="form-control" id="telefono" required placeholder="Ingresa tu telefono">
+          </div>
+
+          <div class="mb-3">
+            <label for="motivo" class="form-label">Motivo</label>
+            <input type="text" class="form-control" id="motivo" required placeholder="Ingresa un motivo">
+          </div>
+
+          <div class="mb-3">
+            <label for="exampleFormControlTextarea1" class="form-label">Comentarios</label>
+            <textarea class="form-control" id="comentarios" rows="3"></textarea>
+            <button type="submit" class="btn btn-primary col-1.5 mt-4" id="enviar">Enviar</button>
+          </div>
+        </form>
+        
+        <form method="get" action="" id="reserva" class="container d-md-block w-75">
+          <h3>Reserva</h3>
+          <div class="mb-3">
+            <label for="nombre-reserva" class="form-label">Nombre</label>
+            <input type="text" class="form-control" id="nombre-reserva" required placeholder="Ingresa tu nombre">
+          </div>
+
+          <div class="mb-3">
+            <label for="correo-reserva" class="form-label">Correo</label>
+            <input type="email" class="form-control" id="correo-reserva" required placeholder="Ingresa tu correo">
+          </div>
+
+          <div class="mb-3">
+            <label for="telefono-reserva" class="form-label">Telefono</label>
+            <input type="tel" class="form-control" id="telefono-reserva" required placeholder="Ingresa tu telefono">
+          </div>
+
+          <div class="mb-3">
+            <label for="fecha-reserva" class="form-label">Fecha</label>
+            <input type="date" class="form-control" id="fecha-reserva" required placeholder="Ingresa una fecha">
+          </div>
+
+          <div class="mb-3">
+            <label for="hora-reserva" class="form-label">Hora</label>
+            <input type="time" class="form-control" id="hora-reserva" required placeholder="Ingresa una hora">
+          </div>
+
+          <div class="mb-3">
+            <label for="asistentes-reserva" class="form-label">Cantidad de asistentes</label>
+            <input type="number" class="form-control" id="asistentes-reserva" required placeholder="Ingresa el numero de asistentes">
+            <button type="submit" class="btn btn-primary col-1.5 mt-4" id="enviar-reserva">Solicitar</button>
+          </div>
+        </form>
+
+        <div id="carouselExample" class="carousel slide">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="./assets/imagenes/Carrusel/mojito.jpg" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="./assets/imagenes/Carrusel/vino.jpg" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="./assets/imagenes/Carrusel/chorillana.jpg" class="d-block w-100" alt="...">
+            </div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+
+        <script src="./assets/js/script.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js" integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N" crossorigin="anonymous"></script>
+    </body>
+    <footer>
+        <p><b>Todos los derechos reservados @</b></p>
+    </footer>
+</html>
