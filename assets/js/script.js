@@ -75,6 +75,13 @@ $(document).ready(function (){
         alert(`Gracias ${nombre} Hemos recibido tu reserva. Hemos registrado ${asistentes} asistentes y enviaremos una pronta respuesta al correo ${correo}`)
     })
 
+    $("#sobre-click").click(function(){
+        $("#sobre-above").css("display", "block")
+    })
+    $("#sobre-above").mouseleave(function(){
+        $("#sobre-above").css("display", "none")
+    })
+
     $("#bebidas-click").click(function(){
         $("#bebidas-above").css("display", "block")
     })
