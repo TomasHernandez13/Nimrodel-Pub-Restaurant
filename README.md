@@ -1,2 +1,2 @@
 # Nimrodel Pub Restaurant
-Página web responsiva que presenta las características del restaurante Nimrodel.
+Página web responsiva que muestra las características del restaurante Nimrodel.
